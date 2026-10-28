@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperPop - Online Stationery Store</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #fffaff;
+            font-family: Arial, sans-serif;
+            color: #302653;
+        }
+
+        .navbar {
+            background-color: #7560b5;
+        }
+
+        .navbar-brand {
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #fce4ec, #e8e2ff);
+            padding: 65px 20px;
+            border-radius: 18px;
+        }
+
+        .hero h1 {
+            color: #6545a5;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-weight: bold;
+            color: #3c2c67;
+        }
+
+        .category-card {
+            border: none;
+            border-radius: 15px;
+            padding: 25px 10px;
+            text-align: center;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .category-card:hover,
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 42px;
+        }
+
+        .product-card {
+            border: 1px solid #eee5fa;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .product-card .card-body {
+            padding: 16px;
+        }
+
+        .price {
+            color: #7048bd;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .btn-purple {
+            background-color: #7050b5;
+            color: white;
+            border: none;
+        }
+
+        .btn-purple:hover {
+            background-color: #51358f;
+            color: white;
+        }
+
+        .offer {
+            background-color: #eee7ff;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        footer {
+            background-color: #282347;
+            color: white;
+        }
+
+        footer a {
+            color: #e9dcff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#home">📒 PaperPop 💗</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Banner -->
+    <section id="home" class="container my-4">
+        <div class="hero">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <p class="text-uppercase fw-bold">Study • Create • Be You</p>
+                    <h1>Welcome to PaperPop 💗</h1>
+                    <h4 class="mt-3">Your One-Stop Stationery Store</h4>
+                    <p class="mt-3">
+                        Notebooks, pens, art supplies and more.
+                        Everything you need to make your ideas come to life!
+                    </p>
+                    <a href="#products" class="btn btn-purple btn-lg mt-2">
+                        Shop Now →
+                    </a>
+                </div>
+
+                <div class="col-md-5 text-center mt-4 mt-md-0">
+                    <img
+                        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=700&q=80"
+                        alt="Notebook and stationery"
+                        class="img-fluid rounded-4 shadow"
+                        style="max-height: 280px; width: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="container py-4">
+        <h2 class="section-title mb-4">Shop by Category</h2>
+
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="category-card shadow-sm" style="background:#ffe9f0;">
+                    <div class="category-icon">📒</div>
+                    <h6 class="fw-bold mt-3">Notebooks</h6>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="category-card shadow-sm" style="background:#e3f2fd;">
+                    <div class="category-icon">🖊️</div>
+                    <h6 class="fw-bold mt-3">Pens & Pencils</h6>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="category-card shadow-sm" style="background:#e1f7ee;">
+                    <div class="category-icon">🎨</div>
+                    <h6 class="fw-bold mt-3">Art Supplies</h6>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="category-card shadow-sm" style="background:#fff6d9;">
+                    <div class="category-icon">🗒️</div>
+                    <h6 class="fw-bold mt-3">Sticky Notes</h6>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="category-card shadow-sm" style="background:#eee7ff;">
+                    <div class="category-icon">📁</div>
+                    <h6 class="fw-bold mt-3">Organizers</h6>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="category-card shadow-sm" style="background:#ffe9f0;">
+                    <div class="category-icon">🎁</div>
+                    <h6 class="fw-bold mt-3">Gift Sets</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="section-title mb-0">Featured Products</h2>
+            <span class="text-primary">Our Collection</span>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Product 1 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card product-card shadow-sm">
+                    <img
+                        src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=500&q=80"
+                        class="card-img-top" alt="Spiral notebooks">
+
+                    <div class="card-body">
+                        <span class="badge bg-danger">Best Seller</span>
+                        <h5 class="mt-2">Spiral Notebook</h5>
+                        <p class="text-warning mb-2">★★★★★ <small class="text-secondary">(4.8)</small></p>
+                        <p class="price">₹149</p>
+                        <a href="#contact" class="btn btn-purple w-100">🛒 Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card product-card shadow-sm">
+                    <img
+                        src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=500&q=80"
+                        class="card-img-top" alt="Colourful pens">
+
+                    <div class="card-body">
+                        <span class="badge bg-success">Popular</span>
+                        <h5 class="mt-2">Gel Pen Set</h5>
+                        <p class="text-warning mb-2">★★★★★ <small class="text-secondary">(4.6)</small></p>
+                        <p class="price">₹199</p>
+                        <a href="#contact" class="btn btn-purple w-100">🛒 Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card product-card shadow-sm">
+                    <img
+                        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=500&q=80"
+                        class="card-img-top" alt="Writing and stationery">
+
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark">Trending</span>
+                        <h5 class="mt-2">Study Notes Kit</h5>
+                        <p class="text-warning mb-2">★★★★★ <small class="text-secondary">(4.7)</small></p>
+                        <p class="price">₹99</p>
+                        <a href="#contact" class="btn btn-purple w-100">🛒 Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card product-card shadow-sm">
+                    <img
+                        src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=500&q=80"
+                        class="card-img-top" alt="Art and painting supplies">
+
+                    <div class="card-body">
+                        <span class="badge bg-info text-dark">Creative Pick</span>
+                        <h5 class="mt-2">Art Supplies Kit</h5>
+                        <p class="text-warning mb-2">★★★★★ <small class="text-secondary">(4.5)</small></p>
+                        <p class="price">₹299</p>
+                        <a href="#contact" class="btn btn-purple w-100">🛒 Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Special Offer -->
+    <section class="container pb-5">
+        <div class="offer text-center shadow-sm">
+            <h6 class="text-uppercase fw-bold text-primary">Special Offer 🎉</h6>
+            <h2 class="section-title">Get 15% Off Your First Order!</h2>
+            <p class="mb-3">Use code <strong>FIRSTPOP</strong> at checkout.</p>
+            <a href="#products" class="btn btn-purple btn-lg">Explore Products →</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container pb-5 text-center">
+        <h2 class="section-title mb-3">About PaperPop</h2>
+        <p class="mx-auto" style="max-width:700px;">
+            PaperPop is a stationery store created for students, artists and
+            creative minds. Discover colourful notebooks, quality pens and
+            art supplies to make every idea special.
+        </p>
+    </section>
+
+    <!-- Contact -->
+    <footer id="contact" class="py-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <h3 class="fw-bold">📒 PaperPop 💗</h3>
+                    <p>Small Stationery, Big Dreams.</p>
+                    <p>Make every page colourful!</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <p><a href="#home">Home</a></p>
+                    <p><a href="#categories">Categories</a></p>
+                    <p><a href="#products">Products</a></p>
+                    <p><a href="#about">About Us</a></p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: support@paperpop.example</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>Follow us: Instagram | Facebook</p>
+                </div>
+
+            </div>
+
+            <hr class="border-light">
+
+            <p class="text-center mb-0">
+                &copy; 2026 PaperPop. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
